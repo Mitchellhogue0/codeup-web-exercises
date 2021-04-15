@@ -8,3 +8,5 @@ if (favColor === "green".toUpperCase()) {
 } else {
     alert("Your favorite color is: " + favColor);
 }
+
+
