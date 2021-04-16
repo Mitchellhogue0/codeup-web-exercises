@@ -1,5 +1,6 @@
 "use strict";
 
+var lineBreak = "------------------------------------"
 var a = 1;
 var b = a++;
 var c = ++a;
@@ -18,8 +19,7 @@ perplexed + 2;
 console.log(perplexed);
 
 var price = 2.7;
-price.toFixed(2);
-console.log(price);
+console.log(price.toFixed(2));
 
 // var price = "2.7";
 // price.toFixed(2);
@@ -99,6 +99,7 @@ console.log(!!"false");
 !!"0"
 console.log(!!"0");
 
+console.log(lineBreak); //----------
 
 var sample = "Hello Codeup";
 
@@ -118,6 +119,7 @@ console.log(sample2.indexOf("C"));
 var sample3 = sample2.substring(6, 12);
 console.log(sample3);
 
+console.log(lineBreak); //-----------------------
 
 var theLittleMermaid = 3;
 var brotherBear = 5;
@@ -133,12 +135,34 @@ var week = 7;
 
 console.log((google*week) + (amazon*week) + (facebook*week));
 
+var classFull = 28;
+var schedConflict = false;
+if ( classFull < 30 && schedConflict === false) {
+
+console.log("You can enroll!");
+}
+
+var buy = 2;
+var hasNotExpired = false;
+var premiumAccount = false;
+
+if (premiumAccount === true) {
+    console.log("Product offer accepted!")
+} else ((buy >= 2 && hasNotExpired === false)); {
+    console.log("Product offer accepted!")
+}
+
+console.log(lineBreak); //-----------------------------
 
 
 var username = 'codeup';
 var password = 'notastrongpassword';
 
-var check = (password > 5) && (password !== username) && (username < 20);
+var check = (password >= 5)
+    && (password !== username)
+    && (username <= 20)
+    && (username.trim())
+    && (password.trim());
 console.log(check);
 
 
