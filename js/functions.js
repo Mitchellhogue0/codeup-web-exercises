@@ -115,7 +115,7 @@
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
     function applyDiscount(OG,disc = 0) {
-        return "Your discounted price is: " + (num1-(num1*num2));
+        return "Your discounted price is: " + (OG-(OG*disc));
     }
 
     console.log(applyDiscount(45.99,.12));
