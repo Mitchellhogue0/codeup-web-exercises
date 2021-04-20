@@ -178,20 +178,23 @@
 
     confirm("Would you like to enter a number?")
 
-    function notANumber(nan){
-        if (isNaN(nan)) {
+    function analyzeUserInput(number) {
+        if (isNaN(number)) {
             return alert("This is not a number")
-
+        } else {
+            evenOrOdd(chosenNumber);
+            plus100(chosenNumber);
+            posOrNeg(chosenNumber);
         }
     }
-    notANumber(number1());
 
     function number1() {
         return prompt("Please enter your number:")
     }
 
-     var chosenNumber = number1();
-    console.log(chosenNumber)
+ var chosenNumber = number1();
+
+    analyzeUserInput(chosenNumber);
 
     function evenOrOdd(number) {
         if (number % 2 === 0) {
@@ -211,10 +214,6 @@
         }
 
     }
-
-    evenOrOdd(chosenNumber);
-    plus100(chosenNumber);
-    posOrNeg(chosenNumber);
 
 
 
