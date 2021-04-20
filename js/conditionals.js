@@ -178,16 +178,23 @@
 
     confirm("Would you like to enter a number?")
 
+    function notANumber(nan){
+        if (isNaN(nan)) {
+            return alert("This is not a number")
+
+        }
+    }
+    notANumber(number1());
 
     function number1() {
-        prompt("Please enter your number:")
+        return prompt("Please enter your number:")
     }
 
-    var chosenNumber = number1();
+     var chosenNumber = number1();
     console.log(chosenNumber)
 
     function evenOrOdd(number) {
-        if (number % 2 == 0) {
+        if (number % 2 === 0) {
             return alert("Your number is even!");
         } else {
             return alert("Your number is odd!")
