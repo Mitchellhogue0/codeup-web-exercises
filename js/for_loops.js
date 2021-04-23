@@ -5,7 +5,8 @@
 
     function showMultiplicationTable(num){
         for (var i = 1; i <= 10; i++) {
-            console.log(num + " x " + i + " = " + (num * i));
+            let solution = num * i;
+            console.log(num + " x " + i + " = " + (solution));
         }
         }
 
@@ -31,11 +32,16 @@
     console.log(lineBreak);
 
 
+
+
     for (var i =1; i <=9;i++){
         var i2 = i.toString()
         console.log(i2.repeat(i))
     }
     console.log(lineBreak)
+
+
+
 
     for (var i = 100; i >= 5; i -= 5) {
         console.log(i);

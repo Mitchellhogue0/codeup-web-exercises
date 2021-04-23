@@ -6,9 +6,9 @@
     while(i > 50 || i % 2 === 0) {
         prompt(i + " is not within parameters, try again");
         if (i < 50 || i % 2 !== 0) {
-            console.log("Nice! you followed instructions");
+            alert("Nice! you followed instructions");
         }
-        break;
+
     }
 
 
