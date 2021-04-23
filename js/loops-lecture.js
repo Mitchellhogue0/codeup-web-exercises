@@ -139,7 +139,124 @@
         cars++;
     } while (cars <= 30);
 
-    console.log("parking lot is full.")
+    console.log("parking lot is full.");
+
+    console.log(lineBreak)
+
+    // // FOR LOOPS
+    // // SYNTAX:
+    // // for: js word that says " im about to start a loop, please treat as such"
+    // // (starting point; stopping point; how to iterate;)
+    // // {code to be executed AT EACH ITERATION}
+
+    for(var i = 0; i <= 10; i++){
+        console.log(`hello world ${i}`) //log starts at 0, will log 11 times
+    }
+    console.log(lineBreak);
+    // // EXAMPLE:
+    // // how many egg cartons can you fill? start at 0 eggs and iterate by 1
+
+    // for (i = 0; i <= 72; i++){
+    //    var cartons = (i / 12)
+    //     console.log(`${i} egg(s)`)
+    // }
+    // console.log(`We filled ${cartons} egg cartons`);
+
+    // // BREAK AND CONTINUE
+    // // break: helps avoid infinite loops
+    // // break: leaves the switch statement if it meets a certain condition
+
+    var dozens = 0;
+    for(let i = 0; i <=36; i++){
+        if(i % 12 === 0){
+            console.log(`starting with: ${dozens} dozen eggs`)
+            dozens++;
+            console.log(dozens)
+            break; // exits out of loop
+            console.log(`we now have ${dozens} dozen eggs`)
+        }
+    }
+
+    for(let i = 0; i <=10; i++){
+        console.log(`first: ${i}`);
+        continue;       // // breaks out of current loop and restarts the loop; will not reach code below
+        i *= 2;
+        console.log(`second ${i}`);
+    }
+    console.log(lineBreak)
+    // // EXTRA: NESTED FOR LOOPS
+    // // Write a (nested) for loop that counts from 1 to 5 and then from 5 to 1
+
+        for(let i = 1; i <= 5; i++){
+            console.log(`first: ${i}`)
+            if(i === 5){
+            for(let i2 = 5; i2 > 0; i2--){
+                console.log(`second: ${i2}`)
+            }
+        }
+
+    }
+    console.log(lineBreak)
+
+
+    // // WRAP INNER LOOP WITHIN A FUNCTION
+    function innerLoop (){
+        for(let i2 = 5; i2 > 0; i2--){
+            console.log(`second: ${i2}`)
+        }
+    }
+
+    for(let i = 1; i <= 5; i++) {
+        console.log(`first: ${i}`)
+        if (i === 5) {
+            innerLoop();
+        }
+
+    }
+
+    console.log(lineBreak)
+
+    // TODO: Loop through a set of numbers (0-30), if the number you're currently at is even, add 2 to it. If it's an
+//  odd number, print "odd"
+// // HINT: remember the remainder operator (modulo)
+
+    for(i = 0; i <=30; i++){
+        if(i % 2 === 0){
+            console.log(`${i} + 2 is ${plusTwo(i)}`);
+        }else{
+            console.log(`${i} is odd`)
+        }
+    }
+
+    function plusTwo(input){
+        return input + 2;
+    }
+
+    console.log(lineBreak);
+
+
+    // // TODO: loop through numbers 1 - 40. Print "marco" if it's divisible by 3. Print "polo" if it's divisible by 5.
+//  If it's neither print "I'm not playing"
+//  Print "marco polo" if it's divisible by 3 and 5.
+
+    for(i =1; i <= 40; i++) {
+        if (i % 3 === 0) {
+            console.log(`${i} is divisible by 3: Marco!`)
+        }
+
+        if (i % 5 === 0) {
+            console.log(`${i} is divisible by 5: Polo!`)
+        }
+        if (i % 5 === 0 && i % 3 === 0) {
+            console.log(`${i} is divisible by 3 and 5, Marco Polo!!`)
+        }
+        if (i % 5 !== 0 || i % 3 !== 0) {
+            console.log(`${i} is not divisible by 3 or 5, I'm not playing :(`)
+        }
+
+    }
+
+
 
 
 
