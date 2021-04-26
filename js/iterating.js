@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    var names = ["Cydnie", "Breeyae", "Macy", "Evan"]
+    var names = ["Cydnie", "Breeyae", "Macy", "Evan"];
 
 
 
@@ -17,7 +17,7 @@
      * array.
      */
 
-    console.log(names.length)
+    console.log(names.length);
 
 
 
@@ -34,7 +34,7 @@
      */
 
     for (let i = 0; i < names.length; i++){
-             console.log(names[i])
+             console.log(names[i]);
          }
 
 
