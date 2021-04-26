@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    console.log("test");
+    var names = ["Cydnie", "Breeyae", "Macy", "Evan"]
 
 
 
@@ -16,6 +16,10 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+
+    console.log(names.length)
+
+
 
     /**
      * TODO:
@@ -29,10 +33,20 @@
      * array.
      */
 
+    for (let i = 0; i < names.length; i++){
+             console.log(names[i])
+         }
+
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function (fam){
+        console.log(`One of my family members is: ${fam}`); // // must have inline function that provides a callback
+    });
+
 
     /**
      * TODO:
@@ -47,5 +61,25 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    function first(input){
+       input = names;
+       return input[0];
+
+    }
+    function second(input){
+        input = names;
+        return input[1];
+
+    }
+    function last(input){
+        input = names;
+        return input[names.length - 1];
+
+    }
+
+    console.log(first());
+    console.log(second());
+    console.log(last());
 
 })();
