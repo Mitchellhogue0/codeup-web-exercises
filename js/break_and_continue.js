@@ -17,12 +17,11 @@
     console.log(`User entered number: ${input}`)
 
     for (var i =0; i <=50; i++){
-        if (i % 2 !== 0){
-            console.log(i);
-        }
         if (i == input){
-            console.log("YIKES! skipping number...")
-
+            console.log(`YIKES! skipping number...${input}`)
+        }
+        if (i % 2 !== 0 && i !== input){
+            console.log(`here is an odd number: ${i}`);
         }
 
     }

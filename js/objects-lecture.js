@@ -279,6 +279,8 @@
                 canFly: true,
                 makeNoise: function () {
                     return `The pterodactyl says ${this.animalSound}`
+                }
+
                 },
                 polarBear: {
                     hasFur: true,
@@ -292,7 +294,7 @@
                 }
             }
         }
-    }
+
 
     console.log(zoo.animals.Lion.makeNoise())
     console.log(zoo.animals.pterodactyl.makeNoise())
