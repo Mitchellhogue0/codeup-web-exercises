@@ -76,39 +76,39 @@
 //      -> console.log EVERY possible thing which could change as your loop runs
 //          -> consider how the methods you are using change state of the array
 
-    // var reversedArray = [];
-    //
-    // function reverseWeek(days){
-    //    var limit = (days.length)
-    //     for (var i = 0; i< limit; i++){
-    //         console.log(days)
-    //         console.log(lineBreak)
-    //         var popped = days.pop();
-    //         console.log(lineBreak)
-    //        reversedArray.push(popped);
-    //         console.log(reversedArray)
-    //         console.log(lineBreak)
-    //     }
-    // }
-    //
-    // reverseWeek(days);
+    var reversedArray = [];
+
+    function reverseWeek(days){
+       var limit = (days.length)
+        for (var i = 0; i< limit; i++){
+            console.log(days)
+            console.log(lineBreak)
+            var popped = days.pop();
+            console.log(lineBreak)
+           reversedArray.push(popped);
+            console.log(reversedArray)
+            console.log(lineBreak)
+        }
+    }
+
+    reverseWeek(days);
 
 
 
-    // function sortMyNums(num1,num2,num3, num4, num5){
-    //     var numsArray = [num1,num2,num3, num4, num5];
-    //     console.log(numsArray);
-    //     numsArray.sort(function (a,b){
-    //         console.log(a)
-    //         console.log(b)
-    //         console.log(a-b);
-    //         return a - b;                   // // a - b will return in numerical order, b - a will return reverse order
-    //     });
-    //     console.log(numsArray);
-    //     return numsArray;
-    // }
-    //
-    // sortMyNums(14, 63, 1009, 345, 4011);
+    function sortMyNums(num1,num2,num3, num4, num5){
+        var numsArray = [num1,num2,num3, num4, num5];
+        console.log(numsArray);
+        numsArray.sort(function (a,b){
+            console.log(a)
+            console.log(b)
+            console.log(a-b);
+            return a - b;                   // // a - b will return in numerical order, b - a will return reverse order
+        });
+        console.log(numsArray);
+        return numsArray;
+    }
+
+    sortMyNums(14, 63, 1009, 345, 4011);
 
     function giveMissyJustice(notASuspectString){
         var musicalGenius = notASuspectString.split('');

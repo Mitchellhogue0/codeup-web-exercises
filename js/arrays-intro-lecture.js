@@ -11,20 +11,20 @@
     //
     // console.log(Array.isArray(myArr)) // //<- checks if input is array, otherwise false
 
-    var myCharacteristics = ["Mitchell", "developer student", "21 year old"]
-
+    // var myCharacteristics = ["Mitchell", "developer student", "21 year old"]
+    //
     // console.log(`the length of the array is ${myCharacteristics.length}`) // //<- will state how many elements are in array
-
+    //
     // console.log(`Hello! I am a ${myCharacteristics[2]} ${myCharacteristics[1]} named ${myCharacteristics[0]}`) // //<- the first element is index 0, the last has index of (length-1)
     //
     // console.log(myCharacteristics[3]) // //<- accessing an index out of the bounds of the array
-
+    //
     // myCharacteristics[0] += " Hogue";
     // console.log(myCharacteristics[0])
     //
     // for (let i = 0; i < 10; i++){
-    //
-    //     // // do something with ONE array element
+
+        // // do something with ONE array element
     // }
 
     var myPets = ["Aspen", "Willow", "Oak"]
