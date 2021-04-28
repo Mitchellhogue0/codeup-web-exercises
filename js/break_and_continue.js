@@ -19,8 +19,7 @@
     for (var i =0; i <=50; i++){
         if (i == input){
             console.log(`YIKES! skipping number...${input}`)
-        }
-        if (i % 2 !== 0 && i !== input){
+        }else if (i % 2 !== 0 && i !== input){
             console.log(`here is an odd number: ${i}`);
         }
 
