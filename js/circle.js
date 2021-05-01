@@ -6,7 +6,7 @@
         radius: 3,
 
         getArea: function () {
-            return (Math.PI * this.radius^2)
+            return (Math.PI *(Math.pow(this.radius, 2)))
             // TODO: complete this method
             // hint: area = pi * radius^2
              // TODO: return the proper value
