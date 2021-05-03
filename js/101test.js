@@ -79,5 +79,23 @@
     }
 
     console.log(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]))
+    console.log(lineBreak)
+
+
+    function onlyNegativeNumbers (str){
+        return str.filter(x => x < 0);
+    }
+
+    console.log(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]))
+    console.log(lineBreak)
+
+    function hasEvens(input){
+        if (input.filter(x => x > 0)) {
+            return true;
+        }
+        return false;
+    }
+
+    console.log(hasEvens([-1,-2,-3,-4,-5,-6]))
 
 })();
