@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms Lecture</title>
+    </head>
+    <body>
+
+        <!--        <form method="POST" action="https://request-inspector.glitch.me">-->
+
+        <!--            <input id="username" name="user" type="text" placeholder="Enter username">-->
+
+        <!--            <input type="submit" value="submit - input">-->
+
+        <!--            <button>Submit - Button</button>-->
+
+        <!--        </form>-->
+
+        <form method="POST" action="https://request-inspector.glitch.me">
+            <div>
+                <input id="email-input" name="email" type="email" placeholder="Enter Email" required>
+                <div>
+                    <input id="password-input" name="password" type="password" placeholder="Enter Password" required>
+                    <input type="radio" name="role" id="role-student" value="student">
+                    <label for="role-student">
+                        Student?
+                    </label>
+                    <input id="role-instructor" name="role" type="radio" value="instructor">
+                    <label for="role-instructor">
+                        Instructor?
+                    </label>
+
+                    <input id="isActive" name="isActive" type="checkbox" value="1">
+                    <label for="isActive">
+                        Is Active?
+                    </label>
+                </div>
+            </div>
+
+            <button>Enter</button>
+
+        </form>
+    </body>
+</html>
