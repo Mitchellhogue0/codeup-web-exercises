@@ -105,8 +105,49 @@
 
 
     function onlyPositiveEvens (str){
-        return str.filter(x => x > 0 && x *2 === 0);
+        return str.filter(x => x > 0 && x % 2 === 0);
     }
 
-    console.log(onlyPositiveEvens([2,-5,-6]))
+    console.log(onlyPositiveEvens([3,3,4,6]))
+    console.log(lineBreak)
+
+
+    function onlyNegativeOdds (str){
+        return str.filter(x => x % 2 === -1);
+    }
+
+    console.log(onlyNegativeOdds([2, -5, -6]))
+    console.log(lineBreak)
+
+
+
+    function shortestString (arr){
+        arr.sort(function(a, b){
+            return a.length - b.length;
+        });
+        return arr[0]
+    }
+
+    console.log(shortestString(["hello", "everybody"]))
+    console.log(lineBreak)
+
+
+
+    function longestString (arr){
+        arr.sort(function(a, b){
+            return b.length - a.length;
+        });
+        return arr[0]
+    }
+
+    console.log(longestString(["mary", "had", "a", "little", "lamb"]))
+    console.log(lineBreak);
+
+
+    function getUniqueValue (str) {
+        return str.map(x => x )
+    }
+
+
+    console.log(getUniqueValue(["ant", "ant", "mosquito", "mosquito", "ladybug"]))
 })();
