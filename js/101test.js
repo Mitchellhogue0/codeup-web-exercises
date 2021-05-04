@@ -89,13 +89,24 @@
     console.log(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]))
     console.log(lineBreak)
 
-    function hasEvens(input){
-        if (input.filter(x => x > 0)) {
-            return true;
+    let count = 0;
+    function countEvens(input) {
+        for (let i = 0; i < input.length; i++) {
+            if (input[i] % 2 === 0) {
+                count++;
+            }
+
         }
-        return false;
+        return count;
+    }
+    console.log(countEvens([5,6,7,8]))
+    console.log(lineBreak)
+
+
+
+    function onlyPositiveEvens (str){
+        return str.filter(x => x > 0 && x *2 === 0);
     }
 
-    console.log(hasEvens([-1,-2,-3,-4,-5,-6]))
-
+    console.log(onlyPositiveEvens([2,-5,-6]))
 })();
