@@ -150,4 +150,31 @@
 
 
     console.log(getUniqueValue(["ant", "ant", "mosquito", "mosquito", "ladybug"]))
+
+
+    function elementsTimesTwo (arr) {
+        return arr.map(x => x * 2)
+    }
+
+    console.log(elementsTimesTwo([1, 2, 3]))
+
+
+    function flatten (arr){
+        return arr.flat();
+    }
+
+    console.log(flatten([[1, 2], [3, 4], [5, 6]]))
+
+
+    function addOneToArray (arr) {
+        return arr.map(x => x + 1)
+    }
+
+    console.log(addOneToArray([1, 2, 3]))
+
+
+    function totalOfBookPrices (arr) {
+        return arr.map(price => price + price)
+
+        }
 })();
