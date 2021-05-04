@@ -144,8 +144,8 @@
     console.log(lineBreak);
 
 
-    function getUniqueValue (str) {
-        return str.map(x => x )
+    function getUniqueValue (arr) {
+        return arr.filter((v, i, a) => a.indexOf(v) === i)
     }
 
 

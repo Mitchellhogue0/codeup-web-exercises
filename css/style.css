@@ -2,3 +2,41 @@ h1 {
     color: purple;
 }
 
+h1 {
+    text-align: center;
+}
+
+header {
+    color: darkslategrey;
+    text-decoration: underline;
+}
+
+body {
+    background-color: aliceblue;
+    background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    font-family: "Al Bayan";
+}
+
+li {
+    list-style-type: circle;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+a:link {
+    color: darkblue;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
