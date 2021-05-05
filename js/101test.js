@@ -173,8 +173,68 @@
     console.log(addOneToArray([1, 2, 3]))
 
 
-    function totalOfBookPrices (arr) {
-        return arr.map(price => price + price)
-
+    // function totalOfBookPrices (arr) {
+    //     return arr.map(price => price + price)
+    //
+    //     }
+    const books = [
+        {
+            "title": "Genetic Algorithms and Machine Learning for Programmers",
+            "price": 36.99,
+            "author": "Frances Buontempo"
+        },
+        {
+            "title": "The Visual Display of Quantitative Information",
+            "price": 38.00,
+            "author": "Edward Tufte"
+        },
+        {
+            "title": "Practical Object-Oriented Design",
+            "author": "Sandi Metz",
+            "price": 30.47
+        },
+        {
+            "title": "Weapons of Math Destruction",
+            "author": "Cathy O'Neil",
+            "price": 17.44
         }
+    ]
+
+    var totalOfBookPrices = function(arr) {
+        var price = 0;
+
+        for (var i = 0; i < arr.length; i++) {
+            price += arr[i].price;
+        }
+
+        return price;
+    }
+
+
+    console.log(totalOfBookPrices(books))
+    console.log(lineBreak);
+
+
+
+    var getAverageBookPrice = function(arr) {
+        var price = 0;
+
+        for (var i = 0; i < arr.length; i++) {
+            price += arr[i].price;
+        }
+
+       return price / arr.length;
+
+    };
+
+    console.log(getAverageBookPrice(books))
+    console.log(lineBreak)
+
+
+    function highestPriceBook (arr) {
+        return Math.max.apply(Math, arr.map(function(o) { return o; }))
+    }
+
+    console.log(highestPriceBook(books))
+
 })();

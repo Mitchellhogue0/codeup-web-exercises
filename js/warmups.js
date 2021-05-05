@@ -26,4 +26,19 @@
     console.log(cube(3))
     console.log(cubeRoot(27))
     console.log(cubeRoot(cube(3)))
+
+
+   //Write a function called last(input) that returns the last character of a string
+
+    function last(input) {
+        return input.charAt(input.length - 1)
+    }
+
+    console.log(last("hello, world"))
+    console.log(last("This is a warmup!"))
+
+
+
+
+
 })();
