@@ -1,0 +1,13 @@
+#container {
+   margin: 50px auto;
+   width: 500px;
+   padding: 10px;
+}
+
+.article {
+float: right;
+}
+
+p {
+   color: blue;
+}

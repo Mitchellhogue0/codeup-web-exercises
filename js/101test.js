@@ -232,7 +232,13 @@
 
 
     function highestPriceBook (arr) {
-        return Math.max.apply(Math, arr.map(function(o) { return o; }))
+        var low = {price: 37}
+        var highest;
+        for (var i =0; i < arr.length; i++)
+        if (books[i].price > low.price){
+            highest = books[i]
+        }
+    return highest;
     }
 
     console.log(highestPriceBook(books))
