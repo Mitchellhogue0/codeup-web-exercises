@@ -55,7 +55,9 @@ a {
 }
 .profile-image{
     position: absolute;
-    top: 300px;
+    top: 250px;
+    width: 150px;
+    height: 150px;
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -64,27 +66,37 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
+}
+
+#edit-btn{
     position: absolute;
-    bottom: 320px;
-    right: 5px
+    bottom: 780px;
+    right: 5px;
 }
 .profile-details{
-    width: 25%;
+    width: calc(25% - 1em);
     margin-left: .5em;
     margin-right: .5em;
-    calc(25% - 16px);
+    position: relative;
+    display: inline-block;
+    top: -375px;
 }
 .timeline{
-    width: 50%;
+    width: calc(48% - 1em);
     margin-left: .5em;
     margin-right: .5em;
-    calc(50% - 16px);
+    position: relative;
+    display: inline-block;
+    top: -170px;
 }
 .who-to-follow{
-    width:25%;
+    width: calc(25% - 1em);
     margin-left: .5em;
     margin-right: .5em;
-    calc(25% - 16px);
+    /*position: relative;*/
+    /*left: 1375px;*/
+    /*bottom: 150px;*/
+    display: inline-block;
 }
 .container{
     margin: 2em;
@@ -95,6 +107,7 @@ a {
     border: 1px var(--separator-color);
     padding: .5em;
     overflow: auto;
+    display: inline-block;
 }
 .media-image{
     width: 50px;
@@ -102,10 +115,16 @@ a {
 }
 .media-body{
     width: 100%;
+    display: inline-block;
 }
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+}
+.profile-items{
+    padding: 0;
+    margin: .5em;
+    list-style-type: none;
 }
 .img-circle {
     border-radius: 100%;
