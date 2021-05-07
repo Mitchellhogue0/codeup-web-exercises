@@ -301,21 +301,24 @@
 
 
 
-    function getTaxRate(arr) {
-        var price = 0;
+    // function getTaxRate(arr) {
+    //     var price = 0;
+    //
+    //     for (var i = 0; i < arr.length; i++) {
+    //         price += arr[i].price;
+    //     }
+    //
+    //     return price //* shoppingCart.tax;
+    //
+    // };
+    //
+    // console.log(getTaxRate(shoppingCart))
+    //
+    function numberOfItems (arr) {
+        return arr.items.length;
+    }
 
-        for (var i = 0; i < arr.length; i++) {
-            price += arr[i].price;
-        }
-
-        return price * shoppingCart.tax;
-
-    };
-
-    console.log(getTaxRate(shoppingCart))
-
-
-
+    console.log(numberOfItems(shoppingCart))
 
 
 
