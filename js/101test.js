@@ -242,5 +242,88 @@
     }
 
     console.log(highestPriceBook(books))
+    console.log(lineBreak)
+
+
+    // function lowestPriceBook (arr) {
+    //     var lowest = Infinity
+    //     var temp;
+    //     for (var i=arr.length-1; i>=0; i--)
+    //         temp = arr[i].price;
+    //     if (temp < lowest){
+    //         lowest = temp;
+    //     }
+    //     return lowest;
+    // }
+
+    function lowestBooksPrice(arr) {
+        books.sort(function (a, b) {
+            return a.price - b.price
+        })
+        return arr[0]
+    }
+
+    console.log(lowestBooksPrice(books))
+    console.log(lineBreak)
+
+
+
+    const shoppingCart = {
+        "tax": .08,
+        "items": [
+            {
+                "title": "orange juice",
+                "price": 3.99,
+                "quantity": 1
+            },
+            {
+                "title": "rice",
+                "price": 1.99,
+                "quantity": 3
+            },
+            {
+                "title": "beans",
+                "price": 0.99,
+                "quantity": 3
+            },
+            {
+                "title": "chili sauce",
+                "price": 2.99,
+                "quantity": 1
+            },
+            {
+                "title": "chocolate",
+                "price": 0.75,
+                "quantity": 9
+            }
+        ]
+    }
+
+
+
+    function getTaxRate(arr) {
+        var price = 0;
+
+        for (var i = 0; i < arr.length; i++) {
+            price += arr[i].price;
+        }
+
+        return price * shoppingCart.tax;
+
+    };
+
+    console.log(getTaxRate(shoppingCart))
+
+
+
+
+
+
+
+
+
+
+
+
 
 })();
