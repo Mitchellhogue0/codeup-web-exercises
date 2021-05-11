@@ -1,0 +1,42 @@
+/**/
+@media screen and (min-width:576px) {
+
+}
+/**/
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding-left: 2em ;
+    padding-right: 2em;
+   justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.header-img {
+    width: 890px;
+    height: 385px;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+   flex-flow: column wrap;
+    justify-content: flex-start;
+    margin-top: 5em ;
+}
+
+.main p {
+
+}
+
+.sub-section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+li {
+    margin: .5em;
+}
