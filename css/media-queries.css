@@ -1,6 +1,6 @@
 /*Mobile Query*/
 
-@media screen and (min-width:365px) and (max-width: 500px) {
+@media screen and (min-width:300px) and (max-width: 700px) {
 
     .nav-links {
         list-style: none;
@@ -32,7 +32,6 @@
     .main {
         display: inline-block;
         flex-flow: column wrap;
-        justify-content: flex-start;
         width: 100%;
     }
 
@@ -40,7 +39,6 @@
     .sub-section {
         display: inline-block;
         flex-flow: column wrap;
-        justify-content: flex-end;
         width: 100%;
     }
 
@@ -66,7 +64,7 @@
 }
 /*Desktop Query*/
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:700px) {
     .nav-links {
         list-style: none;
         display: flex;
@@ -78,22 +76,18 @@
 
     .header-img {
         width: 890px;
-        height: 385px;
+        height: auto;
         margin: auto;
     }
 
     .main {
         display: inline-block;
-        flex-flow: column wrap;
-        justify-content: flex-start;
         width: 50%;
     }
 
 
     .sub-section {
         display: inline-block;
-        flex-flow: column wrap;
-        justify-content: flex-end;
         padding: 1em;
         width: 40%;
     }
