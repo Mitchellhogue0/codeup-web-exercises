@@ -41,16 +41,41 @@
     // If either of the arguments are not a numeric string or number, return a string message indicating which argument is not a number/numeric string
     // (edited)
 
-    function remainder (num, div){
-       if (isNaN(num) || isNaN(div)){
-           return "This is not a numeric string or number"
-       } else if (typeof num === "string" || typeof num === "number" || typeof div === "string" || typeof div === "number"){
-           return num % div;
-       }
+    // function remainder (num, div){
+    //    if (isNaN(num) || isNaN(div)){
+    //        return "This is not a numeric string or number"
+    //    } else if (typeof num === "string" || typeof num === "number" || typeof div === "string" || typeof div === "number"){
+    //        return num % div;
+    //    }
+    //
+    // }
+    //
+    // console.log(remainder(20,"hello"))
 
+
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+
+
+    // for (var i = 0; i <= 5; i++) {
+    //     var str = '';
+    //     for (var j = 1; j <= i; j++) {
+    //         str+='* ';
+    //     }
+    //     console.log(str);
+    // }
+
+    // OR
+
+    for(let i = 1; i <= 5; i++){
+       var i2 = "* "
+        console.log((i2).repeat(i))
     }
 
 
-    console.log(remainder(20,"hello"))
 
 })();
