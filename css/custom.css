@@ -1,0 +1,23 @@
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    text-align: center;
+}
+
+.jumbo-words{
+    background-color: white;
+    opacity: 70%;
+
+}
+
+.radio1 {
+    padding: 0 0 10px 30px;
+}
+
+.radio2 {
+    padding: 0 0 10px 30px;
+}
+
+footer{
+    text-align: right;
+    padding: 10px;
+}
