@@ -10,6 +10,7 @@
         <title>Title</title>
     </head>
     <body>
+<!--        Nav bar-->
         <div class="navbar navbar-lg navbar-light bg-light navigash" role="navigation">
             <a class="navbar-brand" href="#">Pizza World</a>
             <a class="nav-link" href="#">Order Online</a>
@@ -20,33 +21,34 @@
             </form>
             <a class="nav-link sign-up sign" href="#"><i class="bi bi-person-fill"></i>Sign Up</a>
         </div>
-        <div class="container">
+        <div class="container"> <!-- contains the rest of the body-->
 
             <div class="jumbotron jumbotron-fluid">
                 <h1 class="display-4 jumbo-words">Welcome to Pizza World!</h1>
             </div>
+<!--            beginning tabs wrap-->
             <div class="container tabs-wrap">
                 <h2>Build your own pizza!</h2>
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a href="#size" aria-controls="size" role="tab" data-toggle="tab" aria-expanded="true">Size and
-                            Crust <span
-                                    class="badge badge-pill badge-secondary">1</span></a>
+                        <a class="nav-link" data-toggle="tab" href="#size"><span
+                                class="badge badge-pill badge-secondary">1</span>Size
+                            of Crust</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#cheese" aria-controls="cheese" role="tab" data-toggle="tab" aria-expanded="false">Cheese
-                            and Sauce <span
-                                    class="badge badge-pill badge-secondary">2</span></a>
+                        <a class="nav-link" data-toggle="tab" href="#cheese"><span
+                                class="badge badge-pill badge-secondary">2</span>Cheese
+                            and Sauce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="topping-tab" data-bs-toggle="tab" href="#topping" role="tablist"
-                           aria-controls="profile" aria-selected="false">Toppings <span
-                                class="badge badge-pill badge-secondary">3</span></a>
+                        <a class="nav-link" data-toggle="tab" href="#topping"><span
+                                class="badge badge-pill badge-secondary">3</span>Toppings</a>
                     </li>
                 </ul>
-
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active card" id="size">
+<!--                    contains all tab content-->
+                <div class="tab-content" id="myTabContent">
+<!--                size tab-->
+                    <div role="tabpanel" class="tab-pane active card" id="size" aria-labelledby="size-tab">
                         <div class="card-header">
                             Choose size and Crust
                         </div>
@@ -90,9 +92,10 @@
                             <a href="#" class="btn btn-primary next">Next Step</a>
                         </footer>
                     </div>
-                    <div role="tabpanel" class="card tab-pane" id="cheese">
+<!--                    cheese tab-->
+                    <div role="tabpanel" class="card tab-pane" id="cheese" aria-labelledby="cheese-tab">
                         <div class="card-header">
-                            Choose size and Crust
+                            Choose Cheese and Sauce
                         </div>
                         <div class="card" style="width: 100%;">
                             <div class="card-header ">
@@ -140,6 +143,10 @@
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
                 crossorigin="anonymous"></script>
