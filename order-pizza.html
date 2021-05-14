@@ -25,18 +25,18 @@
             <div class="jumbotron jumbotron-fluid">
                 <h1 class="display-4 jumbo-words">Welcome to Pizza World!</h1>
             </div>
-            <div>
+            <div class="container tabs-wrap">
                 <h2>Build your own pizza!</h2>
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="size-tab" data-bs-toggle="tab" data-bs-target="#size" href="#size" role="tablist"
-                           aria-controls="size" aria-selected="false">Size and Crust <span
-                                class="badge badge-pill badge-secondary">1</span></a>
+                        <a href="#size" aria-controls="size" role="tab" data-toggle="tab" aria-expanded="true">Size and
+                            Crust <span
+                                    class="badge badge-pill badge-secondary">1</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="cheese-tab" data-bs-toggle="tab" href="#cheese" role="tablist"
-                           aria-controls="profile" aria-selected="false">Cheese and Sauce <span
-                                class="badge badge-pill badge-secondary">2</span></a>
+                        <a href="#cheese" aria-controls="cheese" role="tab" data-toggle="tab" aria-expanded="false">Cheese
+                            and Sauce <span
+                                    class="badge badge-pill badge-secondary">2</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="topping-tab" data-bs-toggle="tab" href="#topping" role="tablist"
@@ -44,48 +44,53 @@
                                 class="badge badge-pill badge-secondary">3</span></a>
                     </li>
                 </ul>
-            </div>
-            <div class="tab-content">
-                <div class="card tab-pane show" id="size">
-                    <div class="card-header">
-                        Choose size and Crust
-                    </div>
-                    <div class="card" style="width: 100%;">
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active card" id="size">
                         <div class="card-header">
-                            Hand Tossed
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                        </ul>
-                        <div class="custom-control custom-radio radio1">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">Small(10")</label>
-                        </div>
-                        <div class="custom-control custom-radio radio2">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">Medium(12")</label>
+                            Choose size and Crust
                         </div>
                         <div class="card" style="width: 100%;">
                             <div class="card-header">
-                                Crispy Thin
+                                Hand Tossed
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
                             </ul>
                             <div class="custom-control custom-radio radio1">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Medium(12")</label>
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Small(10")</label>
                             </div>
                             <div class="custom-control custom-radio radio2">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Large(14")</label>
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Medium(12")</label>
                             </div>
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Crispy Thin
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                </ul>
+                                <div class="custom-control custom-radio radio1">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Medium(12")</label>
+                                </div>
+                                <div class="custom-control custom-radio radio2">
+                                    <input type="radio" id="customRadio2" name="customRadio"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio2">Large(14")</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
                         </div>
                         <footer>
                             <a href="#" class="btn btn-primary next">Next Step</a>
                         </footer>
                     </div>
-                    <div class="card tab-pane" id="cheese">
+                    <div role="tabpanel" class="card tab-pane" id="cheese">
                         <div class="card-header">
                             Choose size and Crust
                         </div>
@@ -97,11 +102,13 @@
                                 <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
                             </ul>
                             <div class="custom-control custom-radio radio1">
-                                <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                                <input type="radio" id="customRadio5" name="customRadio"
+                                       class="custom-control-input">
                                 <label class="custom-control-label" for="customRadio1">Small(10")</label>
                             </div>
                             <div class="custom-control custom-radio radio2">
-                                <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                                <input type="radio" id="customRadio6" name="customRadio"
+                                       class="custom-control-input">
                                 <label class="custom-control-label" for="customRadio2">Medium(12")</label>
                             </div>
                             <div class="card" style="width: 100%;">
@@ -109,14 +116,17 @@
                                     Crispy Thin
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.
+                                    </li>
                                 </ul>
                                 <div class="custom-control custom-radio radio1">
-                                    <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio7" name="customRadio"
+                                           class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Medium(12")</label>
                                 </div>
                                 <div class="custom-control custom-radio radio2">
-                                    <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio8" name="customRadio"
+                                           class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Large(14")</label>
                                 </div>
                             </div>
@@ -125,8 +135,9 @@
                             </footer>
                         </div>
 
-                </div>
+                    </div>
 
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
