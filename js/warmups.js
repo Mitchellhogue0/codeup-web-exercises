@@ -71,10 +71,21 @@
 
     // OR
 
-    for(let i = 1; i <= 5; i++){
-       var i2 = "* "
-        console.log((i2).repeat(i))
+    // for(let i = 1; i <= 5; i++){
+    //    var i2 = "* "
+    //     console.log((i2).repeat(i))
+    // }
+
+
+    // Write a function named secondToLast(arr) that returns the data type of the second to last element of the array parameter. When you call the function, pass in an array of your choosing
+
+    function secondToLast(arr) {
+        return typeof(arr);
     }
+
+    console.log(secondToLast(2))
+    console.log(secondToLast("hello"))
+    console.log(secondToLast(true))
 
 
 
