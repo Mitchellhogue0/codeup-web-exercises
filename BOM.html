@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM lecture</title>
+    </head>
+    <body>
+
+        <h1>BOM LECTURE</h1>
+
+        <script>
+            let num = 3;
+
+            (function () {
+                "use strict";
+                // var funcNum = 5;
+
+                // window.onload = function () {
+                //     alert('your window has loaded')
+                // }
+                //
+                // var sayHello = setInterval(function() {
+                //     alert('Hello!')
+                // }, 5000);
+                //
+                // clearInterval(sayHello);
+                //TODO: This program will run indefinitely. To finish coding this program, you’ll need to stop the setInterval() method after the showTime() function has run five times.
+//Save setInterval function to a variable
+//Pass the variable into the clearInterval function to stop the interval
+//Hint (It may be helpful to create an if statement
+//                 let count = 0;
+//
+//                 function showTime() {
+//                     // return new date and time
+//                     let dateTime = new Date();
+//                     // return the time
+//                     let time = dateTime.toLocaleTimeString();
+//                     count += 1;
+//                     //if the count reaches 5, stop the program.
+//                     if (count === 5) {
+//                         clearInterval(display)
+//                     }
+//                     console.log(time)
+//                 }
+//
+//                 let display = setInterval(showTime, 5000);
+
+
+                // let count = 0;
+                //
+                // function greet() {
+                //     console.log('hello world');
+                // }
+                //
+                // setTimeout(greet, 2000);
+                //
+                // console.log('a hello is coming...')
+
+
+                //TODO: Write a function called showTime() that logs the current time after six seconds. To return a new date and time, save the results of new Date() to a variable. Example let dateTime = new Date();
+
+                function showTime() {
+                    let dateTime = new Date();
+                    let time = dateTime.toLocaleTimeString();
+                    console.log(time);
+                }
+
+                setTimeout(showTime, 6000);
+            })();
+
+        </script>
+
+    </body>
+</html>
