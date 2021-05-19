@@ -74,8 +74,10 @@ firstBlue.setAttribute('class', 'col-3')
 let yellowDiv = document.getElementsByClassName('border-yellow');
 console.log(yellowDiv);
 
-yellowDiv.style.border = '4px solid #f8f8f8';
-// yellowDiv.style.color = "blue";
+for(var i = 0; i < yellowDiv.length; i++){
+    yellowDiv[i].style.border = '4px solid #f8f8f8';
+    yellowDiv[i].style.color = "blue";
+}
 
 // // change inner contents
 let yellowPar = document.getElementById('change-txt');
