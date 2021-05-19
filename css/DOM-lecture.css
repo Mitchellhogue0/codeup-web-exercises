@@ -1,0 +1,74 @@
+.border {
+    border: 1px solid black;
+    padding: 12px;
+    margin: 3px;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#border-red {
+    border: 1px solid red;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-orange {
+    border: 1px solid orange;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-yellow {
+    border: 1px solid yellow;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-yellow-green {
+    border: 1px solid yellowgreen;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-green {
+    border: 1px solid green;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-blue {
+    border: 1px solid blue;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-light-purple {
+    border: 1px solid mediumpurple;
+    padding: 12px;
+    margin: 3px;
+}
+
+.border-purple {
+    border: 1px solid purple;
+    padding: 12px;
+    margin: 3px;
+}
+
+.blue-background {
+    background-color: #020066;
+}
+
+.green-text {
+    color: darkgreen;
+}
