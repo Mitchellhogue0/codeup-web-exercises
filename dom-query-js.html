@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="./css/dom-query-js.css">
 
         <title>DOM: Query and Modify</title>
     </head>
@@ -26,7 +27,14 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
         </p>
-
+        <hr>
+        <br>
+    <div class="container">
+        <button id="btn1">Change Main Header!</button>
+        <button id="btn2">Change Sub-header!</button>
+        <button id="btn3">Change whole list!</button>
+        <button id="btn4">Change Item 1!</button>
+    </div>
         <script>
             (function () {
                 "use strict";
@@ -34,30 +42,30 @@
                 var mainHeader = document.getElementById('main-header');
 
                 // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-                mainHeader.innerText = 'JavaScript is Cool';
+                // mainHeader.innerText = 'JavaScript is Cool';
 
                 // TODO: Uncomment the next line and get the sub header element by id
                 var subHeader = document.getElementById('sub-header');
 
                 // TODO: Set the text color of subHeader to blue
-                subHeader.style.color = 'blue';
+                // subHeader.style.color = 'blue';
 
                 // TODO: Uncomment the next line and get all list items
                 var listItems = document.getElementsByTagName('li');
                 console.log(listItems);
 
                 // TODO: Set text color on every other list item to grey
-                for(var j = 0; j < listItems.length; j++) {
-                    if (j % 2 ===0) {
-                        listItems[j].style.color = 'grey';
-                    }
+                // for(var j = 0; j < listItems.length; j++) {
+                //     if (j % 2 ===0) {
+                //         listItems[j].style.color = 'grey';
+                //     }
 
                     // TODO: Set text color of li with dbid = 1 to blue
-                    var dbid = listItems[j].getAttribute('data-dbid');
-                    if (dbid === "1") {
-                        listItems[j].style.color = 'blue';
-                    }
-                }
+                    // var dbid = listItems[j].getAttribute('data-dbid');
+                    // if (dbid === "1") {
+                    //     listItems[j].style.color = 'blue';
+                    // }
+                // }
 
                 // TODO: Uncomment the next line and get all elements with class name sub-paragraph
                 var subParagraphs = document.getElementsByClassName('sub-paragraph');
@@ -66,6 +74,67 @@
                 for(var i = 0; i < subParagraphs.length; i++){
                     subParagraphs[i].innerText="Mission Accomplished!";
                 }
+
+
+                setHeaderEvent();
+
+                function setHeaderEvent() {
+                    document.getElementById("btn1")
+                        .addEventListener("click", replaceMainNode);
+                }
+
+                function replaceMainNode() {
+                    document.getElementById("main-header")
+                        mainHeader.innerText = 'JavaScript is Cool!';
+                }
+
+                setSubHeaderEvent();
+
+                function setSubHeaderEvent() {
+                    document.getElementById("btn2")
+                        .addEventListener("click", replaceSubNode);
+                }
+
+                function replaceSubNode() {
+                    document.getElementById("sub-header")
+                    subHeader.style.color = 'blue';
+                }
+
+
+                setListEvent();
+
+                function setListEvent() {
+                    document.getElementById("btn3")
+                        .addEventListener("click", replaceListNode);
+                }
+
+                function replaceListNode() {
+                    document.getElementsByTagName('li');
+                    for (var j = 0; j < listItems.length; j++) {
+                        if (j % 2 === 0) {
+                            listItems[j].style.color = 'grey';
+                        }
+                    }
+                }
+
+
+                setItemEvent();
+
+                function setItemEvent() {
+                    document.getElementById("btn4")
+                        .addEventListener("click", replaceItemNode);
+                }
+
+                function replaceItemNode() {
+                    document.getElementsByTagName('li');
+                    for (var j = 0; j < listItems.length; j++) {
+                        var dbid = listItems[j].getAttribute('data-dbid');
+                        if (dbid === "1") {
+                            listItems[j].style.color = 'blue';
+                        }
+                    }
+                }
+
             })();
         </script>
 
