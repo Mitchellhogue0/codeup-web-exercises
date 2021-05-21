@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/dom-query-js.css">
 
         <title>DOM: Query and Modify</title>
@@ -29,11 +30,11 @@
         </p>
         <hr>
         <br>
-    <div class="container">
-        <button id="btn1">Change Main Header!</button>
-        <button id="btn2">Change Sub-header!</button>
-        <button id="btn3">Change whole list!</button>
-        <button id="btn4">Change Item 1!</button>
+    <div id="container" class="d-flex">
+<!--        <button id="btn1">Change Main Header!</button>-->
+<!--        <button id="btn2">Change Sub-header!</button>-->
+<!--        <button id="btn3">Change whole list!</button>-->
+<!--        <button id="btn4">Change Item 1!</button>-->
     </div>
         <script>
             (function () {
@@ -75,11 +76,16 @@
                     subParagraphs[i].innerText="Mission Accomplished!";
                 }
 
+                var container = document.getElementById("container");
+                var btn1 = document.createElement("button");
+                container.append(btn1)
+                btn1.innerText = "Change Main Header!"
+                btn1.setAttribute("class", "btn btn-success btn-lg btn-block")
 
                 setHeaderEvent();
 
                 function setHeaderEvent() {
-                    document.getElementById("btn1")
+                    btn1
                         .addEventListener("click", replaceMainNode);
                 }
 
@@ -88,10 +94,16 @@
                         mainHeader.innerText = 'JavaScript is Cool!';
                 }
 
+                var btn2 = document.createElement("button");
+                container.append(btn2);
+                btn2.innerText = "Change Sub Header!"
+                btn2.setAttribute("class", "btn btn-info btn-lg btn-block")
+
+
                 setSubHeaderEvent();
 
                 function setSubHeaderEvent() {
-                    document.getElementById("btn2")
+                    btn2
                         .addEventListener("click", replaceSubNode);
                 }
 
@@ -101,10 +113,15 @@
                 }
 
 
+                var btn3 = document.createElement("button");
+                container.append(btn3);
+                btn3.innerText = "Change List Items!"
+                btn3.setAttribute("class", "btn btn-info btn-lg btn-block")
+
                 setListEvent();
 
                 function setListEvent() {
-                    document.getElementById("btn3")
+                    btn3
                         .addEventListener("click", replaceListNode);
                 }
 
@@ -118,10 +135,15 @@
                 }
 
 
+                var btn4 = document.createElement("button");
+                container.append(btn4);
+                btn4.innerText = "Change Item 1!"
+                btn4.setAttribute("class", "btn btn-success btn-lg btn-block")
+
                 setItemEvent();
 
                 function setItemEvent() {
-                    document.getElementById("btn4")
+                    btn4
                         .addEventListener("click", replaceItemNode);
                 }
 
@@ -137,6 +159,9 @@
 
             })();
         </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
     </body>

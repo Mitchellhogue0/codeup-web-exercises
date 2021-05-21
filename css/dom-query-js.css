@@ -1,5 +1,7 @@
-.container {
+#container {
     border: 2px solid gray;
     padding: 5px;
-    width: fit-content;
+    /*width: fit-content;*/
+    flex-flow: column wrap;
+    margin: 3em;
 }
