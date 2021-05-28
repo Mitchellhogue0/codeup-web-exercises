@@ -314,19 +314,52 @@
     //
     // console.log(getTaxRate(shoppingCart))
     //
-    function numberOfItems (arr) {
-        return arr.items.length;
+    // function numberOfItems (arr) {
+    //     return arr.items.length;
+    // }
+    //
+    // console.log(numberOfItems(shoppingCart))
+
+
+    function totalNumberOfItems (obj) {
+      return  obj.items.reduce((sum, item) => sum + item.quantity, 0)
     }
 
-    console.log(numberOfItems(shoppingCart))
+    console.log(totalNumberOfItems(shoppingCart))
 
 
 
+    function getAverageItemPrice (obj) {
+        const total = obj.items.reduce((sum, item) => sum + item.price, 0)
+        return total / obj.items.length
+    }
+
+    console.log(getAverageItemPrice(shoppingCart))
 
 
+    function getAverageSpentPerItem (obj) {
+        const total = obj.items.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+        return total / totalNumberOfItems(obj)
+    }
 
 
+    console.log(getAverageSpentPerItem(shoppingCart))
 
+
+    function mostSpentOnItem (obj) {
+        let most = 0;
+        let mostSpentOnItemindex;
+        obj.items.forEach((item, index) => {
+           const spentOnItem = item.price * item.quantity
+        if (spentOnItem > most){
+            most = spentOnItem;
+            mostSpentOnItemindex = index;
+        }
+        })
+        return obj.items[mostSpentOnItemindex];
+    }
+
+    console.log(mostSpentOnItem(shoppingCart))
 
 
 })();
