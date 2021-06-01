@@ -35,4 +35,8 @@ $("h2").addClass("border");
 
 $(".pink").css("background-color", "pink");
 $(".orange").css("background-color", "orange");
-$("document").ready($(".orange").hide());
+$("document").ready(function () {
+    return $(".orange").hide()
+});
+
+
