@@ -40,3 +40,16 @@ $("document").ready(function () {
 });
 
 
+// // if you want to use multiple selectors using jquery, they must be within the same quotation, separated by a comma
+$("p , div").css({
+    "font-size": "20px",
+    "color": "red"
+})
+
+$("#blue, .pink").css("font-family", "Arial")
+
+// // using an * selects all elements and the elements children. ie,
+$("div *").css("color" , "blue");
+// selects all divs and elements within divs
+
+
