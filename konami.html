@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konami Code</title>
+        <link rel="stylesheet" href="css/konami.css">
+    </head>
+    <body>
+        <div id="container">
+        <h1>Konami Code</h1>
+        <div class="blink-me">
+        </div>
+
+        <div id="pics">
+
+        </div>
+
+        <script src="./libraries/jquery-2.2.4.js"></script>
+        <script>
+            "use strict";
+
+            $(document).keyup(function (event) {
+                console.log(event.keyCode);
+            });
+
+
+            let cheatCode = [38,38,40,40,37,39,37,39,66,65,13];
+            let userInput =[];
+
+            let keyUpHandler = function (e) {
+                console.log(userInput)
+                userInput.push(e.keyCode);
+                if (cheatCode.join() === userInput.join()){
+                    $("<p class='newP'> YOU HAVE 30 NEW LIVES </p>").appendTo(".blink-me");
+                    $(".newP").css({
+                        display: "flex",
+                        textAlign : "center",
+                        justifyContent : "center",
+                        fontSize : "50px",
+                        textDecoration: "underline"
+                    })
+                    $("#container").css({
+                        "animation-duration": "2s",
+                    "animation-iteration-count": "infinite",
+                    "animation-direction": "alternate",
+                    "background-color": "#CE6D8B",
+                    "border": "1em solid #CE2D4F",
+                     height: "100%"
+                    })
+                    $("body").css({
+                        "background-color" : "#470FF4"
+                    })
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+                    $("<img src='./img/ole-rick.gif' alt=''>").appendTo("#pics");
+
+                    let ricky = new Audio('img/never-gonna-give.mp3')
+                    ricky.play();
+                    ricky.volume = 0.3;
+                }
+            }
+            $(document).keyup(keyUpHandler);
+        </script>
+        </div>
+    </body>
+</html>
