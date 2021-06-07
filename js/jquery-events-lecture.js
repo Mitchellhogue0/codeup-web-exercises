@@ -103,20 +103,20 @@ beginHover();
 //  -> Now, when a user hovers over one of the .col-md-3 containers, you should replace the text inside #card-title with the data-attribute value
 //  -> When the user hovers out, the data-attribute value should be replaced with the original text ("Card")
 
-    // let hoverIn = function (){
-    //    $(this)
-    //        .find(('.card-title')
-    //        .text($(this)
-    //            .attr("data-attribute"))
-    // )}
-    //
-    // let hoverOut = function () {
-    //
-    // }
-    //
-    // $('.col-md-3').hover(
-    //     hoverIn, hoverOut
-    // )
+    let hoverIn = function (){
+       $(this)
+           .find(('.card-title')
+           .text($(this)
+               .attr("data-attribute"))
+    )}
+
+    let hoverOut = function () {
+
+    }
+
+    $('.col-md-3').hover(
+        hoverIn, hoverOut
+    )
 
 
     // TODO: When an li with the .list-group-item class is clicked, replace the text with the same text, but uppercased
@@ -125,11 +125,17 @@ beginHover();
 //      -> Don't worry about changing the text back
 
     $(".list-group-item").click(function (){
-        $(this).css({
-            "text-transform": "uppercase",
-            backgroundColor : "lightgray"
-        });
+        $(this).css("text-transform", "uppercase");
+        $(this).toggleClass("clicked");
     });
+
+
+    // TODO: Change up the submit button event
+//  -> Add a new input with an id of #redirect-url
+//  -> Remove the old click events from #submitBtn
+//  -> When the user clicks #submitBtn, redirect the page to the value of #redirect-url
+//  -> HINT: You can either add a new input or change the id of an existing input element to #redirect-url to save time
+    // TODO: After a 2 second delay (BOM), when the user loads the page, change #main-title to a value of your choosing (change text, background color, what have you)!
 
 
 
