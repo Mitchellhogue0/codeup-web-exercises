@@ -147,9 +147,12 @@ beginHover();
        if ($("#first").val() === "" || $("#last").val() === '' || $("#handleField").val() === '') {
            alert("All inputs must be filled!")
        } else {
-           console.log($("#first").val())
-           console.log($("#last").val())
-           console.log($("#handleField").val())
+           let person = {
+               firstName: $("#first").val(),
+               lastName: $("#last").val(),
+           handleField: $("#handleField").val()
+           }
+           console.log(person);
 
        }
     });
