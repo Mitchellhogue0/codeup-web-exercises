@@ -30,7 +30,7 @@
 // jquery .ajax() method
 //syntax
 // GET request - getting info from somewhere
-console.log($.ajax("https://jsonplaceholder.typicode.com/comments"))
+// console.log($.ajax("https://jsonplaceholder.typicode.com/comments"))
 
 $.ajax("https://jsonplaceholder.typicode.com/comments", {
     type: "POST",
@@ -50,8 +50,61 @@ $.ajax("https://jsonplaceholder.typicode.com/comments", {
 
 // TODO: using https://jsonplaceholder.typicode.com/ make an ajax request to the comments endpoint and console it.
 
-console.log($.ajax("https://jsonplaceholder.typicode.com/comments"))
+$.ajax("https://jsonplaceholder.typicode.com/comments")
 
 // TODO: make a POST request to the '/posts' endpoint, make sure to include any data required for that post to be made successfully
 
-console.log($.ajax("https://jsonplaceholder.typicode.com/posts"))
+$.ajax("https://jsonplaceholder.typicode.com/posts", {
+    type: "POST",
+    data: {
+        "userId": 11,
+        "id": 101,
+        "title": "GG",
+        "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    }
+});
+
+$("#get-it").click(function () {
+    console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
+        type: "POST",
+        data: {
+            "userId": 11,
+            "id": 101,
+            "title": "GG",
+            "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+        }
+    }));
+})
+
+//responses
+
+//successful                                                                data always first parameter, then status, then
+$.ajax("https://jsonplaceholder.typicode.com/comments").done(function (data, status, jqXhr) {
+    // console.log(status);
+    // console.log(data);
+    // console.log(jqXhr);
+    alert("your request has been completed successfully")
+})
+
+//failed
+//failed() --> method tht will trigger a function to be executed if the ajax request has failed
+// im triggering this err with a typo in the endpoint
+$.ajax("https://jsonplaceholder.typicode.com/commnts", {
+    type: "POST",
+    data: {
+        title: "hello world",
+        body: "our planet rocks!"
+    }
+}).fail(function (jqHxr, status, error) {
+    // console.log(jqHxr);
+    // console.log(status); // 300 or 400 .// failed // statusText
+    // console.log(error); // dont really need to log, simply alert
+    alert("sorry something went wrong :(")
+})
+
+
+//always
+
+$.ajax("https://jsonplaceholder.typicode.com/commnts").always(function () {
+    alert("Thank you for being here today!")
+})
