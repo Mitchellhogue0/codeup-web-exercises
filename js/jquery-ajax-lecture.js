@@ -83,28 +83,53 @@ $.ajax("https://jsonplaceholder.typicode.com/comments").done(function (data, sta
     // console.log(status);
     // console.log(data);
     // console.log(jqXhr);
-    alert("your request has been completed successfully")
+    // alert("your request has been completed successfully")
 })
 
 //failed
 //failed() --> method tht will trigger a function to be executed if the ajax request has failed
 // im triggering this err with a typo in the endpoint
-$.ajax("https://jsonplaceholder.typicode.com/commnts", {
-    type: "POST",
-    data: {
-        title: "hello world",
-        body: "our planet rocks!"
-    }
-}).fail(function (jqHxr, status, error) {
-    // console.log(jqHxr);
-    // console.log(status); // 300 or 400 .// failed // statusText
-    // console.log(error); // dont really need to log, simply alert
-    alert("sorry something went wrong :(")
-})
+// $.ajax("https://jsonplaceholder.typicode.com/commnts", {
+//     type: "POST",
+//     data: {
+//         title: "hello world",
+//         body: "our planet rocks!"
+//     }
+// }).fail(function (jqHxr, status, error) {
+//     // console.log(jqHxr);
+//     // console.log(status); // 300 or 400 .// failed // statusText
+//     // console.log(error); // dont really need to log, simply alert
+//     alert("sorry something went wrong :(")
+// })
 
 
 //always
 
-$.ajax("https://jsonplaceholder.typicode.com/commnts").always(function () {
-    alert("Thank you for being here today!")
+// $.ajax("https://jsonplaceholder.typicode.com/commnts").always(function () {
+//     alert("Thank you for being here today!")
+// })
+
+// using error / success as properties
+$.ajax("https://jsonplaceholder.typicode.com/comments", {
+    type: "GET",
+    success: function (){
+        alert("this worked")
+    },
+    error: function (){
+        alert("an err has occured")
+    }
+})
+
+$.ajax("https://jsonplaceholder.typicode.com/comments").done(function (data){
+    console.log(data);
+    let allPosts = data;
+    console.log(allPosts)
+    let dataID = allPosts[10].id
+    console.log(dataID);
+    // make a request to the comments section and look for onlh the comments that have an ID of the one you just got
+    $.ajax(`https://jsonplaceholder.typicode.com/comments?postId=${dataID}`).done(function (commentsData){
+        console.log(commentsData)
+    })
+}).fail(function (){
+    alert("something went wrong")
 })
