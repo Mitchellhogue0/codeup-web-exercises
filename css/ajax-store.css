@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+}
+
+body {
+    background-image: url("../img/lawnmower.jpeg");
+}

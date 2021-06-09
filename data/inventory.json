@@ -30,5 +30,23 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+    "title": "Weedeaters",
+    "quantity": 30,
+    "categories": [
+        "tool",
+        "gas",
+        "outdoor"
+    ],
+    "price": 100
+}, {
+    "title": "Edgers",
+    "quantity": 20,
+    "categories": [
+        "tool",
+        "gas",
+        "outdoor"
+    ],
+    "price": 150
+}
 ]

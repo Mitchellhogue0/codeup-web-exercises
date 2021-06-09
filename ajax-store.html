@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <!-- saved from url=(0059)https://java.codeup.com/examples/javascript/ajax-store.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Online Store</title>
-</head>
-<body>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Online Store</title>
+        <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/ajax-store.css">
+    </head>
+    <body>
 
-<h1>My Tool Store</h1>
+        <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+        <div class="container">
+        <table class="table-hover table-dark" id="products">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody class="table table-bordered" id="insertProducts"></tbody>
+        </table>
 
-<script src="./ajax-store_files/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+            </div>
+        <div class="button">
 
-<script>
-(function() {
-    "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
+        <button class="btn btn-success" id="reset-btn">Reload</button>
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
-</script>
+        </div>
+        <script src="./libraries/jquery-2.2.4.js"></script>
+
+        <script>
+            (function () {
+                "use strict";
+                // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+                // TODO: Take the data from inventory.json and append it to the products table
+                //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+                //             its contents and fields
+                //       HINT: You will want to target #insertProducts for your new HTML elements
+
+                function letsList() {
+                    $.ajax("data/inventory.json", {
+                        dataType: "json",
+                        success: function (data) {
+                            $("#insertProducts").html('');
+                            for (let product of data) {
+                                let newHtml = `
+                    <tr>
+                        <td>${product.title}</td>
+                        <td>${product.quantity}</td>
+                        <td>${product.price}</td>
+                        <td>${product.categories}</td>
+                    </tr>`
+                                $("#insertProducts").append(newHtml)
+                            }
+                        }
+                    })
+                }
+
+                $(document).ready(function () {
+                    $("#reset-btn").click(function () {
+                        letsList();
+                    })
+                })
+
+            })();
+        </script>
 
 
-
-</body></html>
+    </body>
+</html>
