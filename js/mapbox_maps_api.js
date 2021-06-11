@@ -1,6 +1,4 @@
-const mapboxToken = "pk.eyJ1IjoibWl0Y2hlbGxob2d1ZTAiLCJhIjoiY2twcG44YnFrMTFtMzJwbXczc3N1NzNrbSJ9.IBd4BQGSi5__uarsZNIOQQ"
-
-mapboxgl.accessToken = mapboxToken;
+mapboxgl.accessToken = MAPBOX_TOKEN;
 
 // adding Map to page
 var map = new mapboxgl.Map({
