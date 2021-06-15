@@ -65,20 +65,18 @@
 // >>>>>>>>>>>>>>>>>>>> Mini Exercise <<<<<<<<<<<<<<<<<<<<<<<<
 
 fetch("https://dog.ceo/api/breeds/image/random")
-    .then(response => {
-        console.log(response)
-        console.log(response.json());
-        // createImage(response);
+    .then(response => response.json())       //when you have the curly brace{} it requires you to return the response.json(), without (how it is now), you dont have to return
+    .then(data => {
+        console.log(data);
+        console.log(data.message);
+        $("#random-dog-image").attr('src', data.message)
     })
     .catch(err => {
         console.log(err)
         alert("Sorry there was an error, go away :)")
     });
 
-function createImage(data){
-    console.log(data.url)
-    // $("#random-dog-image").attr('src', data.url);
-}
+
 
 
 
