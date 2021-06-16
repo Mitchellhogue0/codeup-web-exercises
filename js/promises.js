@@ -12,8 +12,6 @@
 //rejected (handle failed request)
 
 
-
-
 // Fetch
 
 //basic fetch syntax
@@ -26,7 +24,6 @@
 //         console.log(err)
 //         alert("Sorry there was an error, go away :)")
 //     });
-
 
 
 // .then(response => console.log(response))
@@ -60,8 +57,6 @@
 // if we wanted to see what we posted, we would have to make another GET request to be able to see it
 
 
-
-
 // >>>>>>>>>>>>>>>>>>>> Mini Exercise <<<<<<<<<<<<<<<<<<<<<<<<
 
 fetch("https://dog.ceo/api/breeds/image/random")
@@ -77,7 +72,19 @@ fetch("https://dog.ceo/api/breeds/image/random")
     });
 
 
-
+// create a second GET request to return the blog post with an id of 11 and display that blog post on the dom.
+fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); //
+        console.log(data[10].id);
+        $("#blog").append(data[10].title)
+            .append(data[10].body)
+    }) // we have the data in json format, now we can manipulate it
+    .catch(error => {
+        console.log(error);
+        console.error(error);
+    });
 
 
 
