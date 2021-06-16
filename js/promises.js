@@ -62,8 +62,8 @@
 fetch("https://dog.ceo/api/breeds/image/random")
     .then(response => response.json())       //when you have the curly brace{} it requires you to return the response.json(), without (how it is now), you dont have to return
     .then(data => {
-        console.log(data);
-        console.log(data.message);
+        // console.log(data);
+        // console.log(data.message);
         $("#random-dog-image").attr('src', data.message)
     })
     .catch(err => {
@@ -78,14 +78,18 @@ fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
     .then(data => {
         console.log(data); //
         console.log(data[10].id);
-        $("#blog").append(data[10].title)
-            .append(data[10].body)
-    }) // we have the data in json format, now we can manipulate it
+        return data[10].id;
+    })
+    .then(dataId => {
+        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${dataId}`)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(comment => {
+                    console.log(comment)
+                    $("#blog").append(`<h4>${comment.name}</h4><hr><p>${comment.body}</p>`)
+                })
+            })
+    })
     .catch(error => {
-        console.log(error);
-        console.error(error);
-    });
-
-
-
-
+        console.log(error)
+});
